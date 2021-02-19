@@ -7,14 +7,14 @@ app.use(cors());
 
 
 app.get('/skateboards', (req, res) => {
-    res.json({skateboards})
+    res.json({result: skateboards})
 })
 
 app.get('/skateboards/:id', (req, res) => {
     const id = Number(req.params.id);
-    const selectedSakteboards = skateboards.find((board) => board.id === id);
+    const selectedSkateboards = skateboards.find((board) => board.id === id);
 
-    res.json({selectedSakteboards});
+    res.json({selectedSkateboards});
 })
 
 
