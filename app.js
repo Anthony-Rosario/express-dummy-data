@@ -14,7 +14,7 @@ app.get('/skateboards/:id', (req, res) => {
     const id = Number(req.params.id);
     const selectedSkateboards = skateboards.find((board) => board.id === id);
 
-    res.json({selectedSkateboards});
+    res.json({result: selectedSkateboards});
 })
 
 
